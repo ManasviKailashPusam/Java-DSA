@@ -42,7 +42,7 @@
          int mid=(low+high)/2;
          if(a[mid]>=target)
          {
-             ans=mid;
+             ceil=a[mid];
              high=mid-1;
          }
          else  
