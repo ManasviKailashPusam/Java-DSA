@@ -1,0 +1,11 @@
+//printing of list
+ public static void printList()
+ {
+     Node temp=head;
+     while(temp!=null)
+     {
+         System.out.println(temp.data+"->");
+         temp=temp.next;
+     }
+     System.out.println("null");
+ }
