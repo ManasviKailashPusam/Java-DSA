@@ -1,0 +1,59 @@
+public class Main
+ {
+     static Node getkthNode(Node temp,int k)
+     {
+         k--;
+         while(temp!=null   & k>0)
+         {
+             k--;
+             temp=temp.next;
+         }
+         return temp;
+     }
+     static Node reverse(Node head)
+     {
+         Node prev=null;
+         Node curr=head;
+         while(curr!=null)
+         {
+             Node front=curr.next;
+             curr.next=prev;
+             prev=curr;
+             curr=front;
+         }
+         return prev;
+     }
+     static Node findkGroups(Node head)
+     {
+         Node temp=head;
+         Node prevNode=null;
+         while(temp!=null)
+         {
+             Node kthnode=findKthNode(temp,k);
+             if(kthnode==null)
+             {
+                 if(prevNode!=null)
+                 {
+                     prevNode.next=temp;
+                 }
+                 break;
+             }
+             Node nextNode=kthNode.next;
+             kthNode=null;
+             reverse(temp);
+             if(temp==head)
+             {
+                head=kthNode;
+             }
+             else
+             {
+                 prevNode.next=kthNode
+             }
+             preNode=temp;
+             temp=NextNode;
+             
+         }
+         return head;
+     }
+     
+ }
