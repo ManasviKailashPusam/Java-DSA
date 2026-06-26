@@ -1,0 +1,31 @@
+ import java.util.Scanner;
+ public class Main
+ {
+     public static int maxConsecutiveOnes(int[]a,int k)
+     {
+         int left=0;
+         int right=0;
+         int zeros=0;
+         int maxlength=0;
+         while(r<a.length)
+         {
+             if(a[right]==0)
+             {
+                 zeros++;
+             }
+             while(zeros>k)
+             {
+                 if(a[left]==0)
+                 {
+                 zero--;
+                 }
+                 left++;
+             }
+             
+             int length=right-left+1;
+             maxlength=Math.max(maxlength,length);
+             right++;
+         }
+         return maxlength;
+     }
+ }
